@@ -1,0 +1,11 @@
+{
+    "name": "UbuntUptime",
+    "description": "Lightweight extension to show uptime since startup on the top bar.",
+    "uuid": "kosmicteal+ubuntuptime@gmail.com",
+    "url": "https://github.com/kosmicteal/UbuntUptime",
+    "settings-schema": "org.gnome.shell.extensions.ubuntuptime",
+    "shell-version": [
+        "45",
+        "47"
+    ]
+}
