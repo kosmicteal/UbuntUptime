@@ -16,7 +16,7 @@ jobs:
     - name: Run Make
       run: make
     - name: Zip Extension
-      run: zip -r ubuntuptime.zip /home/runner/build
+      run: zip ubuntuptime.zip /home/runner/build/extension.js /home/runner/build/metadata.json
     - uses: ncipollo/release-action@v1
       with:
         artifacts: "ubuntuptime.zip"
