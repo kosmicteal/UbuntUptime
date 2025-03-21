@@ -16,10 +16,12 @@ jobs:
     - name: Run Make
       run: make
     - name: Zip Extension
-      run: zip ubuntuptime.zip /home/runner/build/extension.js /home/runner/build/metadata.json
+      run: |
+        cd /home/runner/build
+        zip ubuntuptime.zip extension.js metadata.json
     - uses: ncipollo/release-action@v1
       with:
-        artifacts: "ubuntuptime.zip"
+        artifacts: "/home/runner/build/ubuntuptime.zip"
         name: Latest release ( ${{ github.event.inputs.release }} )
         tag: ${{ github.event.inputs.release }}
         prerelease: false
