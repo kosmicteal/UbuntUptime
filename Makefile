@@ -9,11 +9,15 @@ install:
 
 build:
 	@yarn tsc
+	echo "[MAKE] Build complete"
 
 deploy:
-	mkdir -p $(HOME)/.local/share/gnome-shell/extensions/$(EXT_UUID)
-	cp dist/* $(HOME)/.local/share/gnome-shell/extensions/$(EXT_UUID)
-	cp metadata.json $(HOME)/.local/share/gnome-shell/extensions/$(EXT_UUID)
+	mkdir -p $(HOME)/build
+	cp dist/* $(HOME)/build
+	cp metadata.json $(HOME)/build
+
+	echo "[MAKE] Deploy complete"
+	ls $(HOME)/build
 
 clean:
 	@rm -rf dist

@@ -17,7 +17,7 @@ jobs:
       run: make
     - uses: montudor/action-zip@v1
       with:
-        args: zip -qq -r ubuntuptime.zip /home/runner/.local/share/gnome-shell/extensions/kosmicteal+ubuntuptime@kosmicteal.local
+        args: zip -qq -r ubuntuptime.zip /home/runner/build
     - uses: ncipollo/release-action@v1
       with:
         artifacts: "ubuntuptime.zip"
